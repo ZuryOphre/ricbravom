@@ -3,6 +3,7 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,35 +19,23 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <div className="text-2xl font-semibold tracking-wider">
-            <a href="/">Ricardo Bravo</a>
+            <Link legacyBehavior href="/">Ricardo Bravo</Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a
-              href="/"
-              className="hover:text-gray-300 transition-colors duration-300 text-lg"
-            >
-              Inicio
-            </a>
-            <a
-              href="/gallery"
-              className="hover:text-gray-300 transition-colors duration-300 text-lg"
-            >
-              Galeria
-            </a>
-            <a
-              href="/products"
-              className="hover:text-gray-300 transition-colors duration-300 text-lg"
-            >
-              Productos
-            </a>
-            <a
-              href="/contact"
-              className="hover:text-gray-300 transition-colors duration-300 text-lg"
-            >
-              Contacto
-            </a>
+            <Link legacyBehavior href="/">
+              <a className="hover:text-gray-300 transition-colors duration-300 text-lg">Inicio</a>
+            </Link>
+            <Link legacyBehavior href="/gallery">
+              <a className="hover:text-gray-300 transition-colors duration-300 text-lg">Galeria</a>
+            </Link>
+            <Link legacyBehavior href="/products">
+              <a className="hover:text-gray-300 transition-colors duration-300 text-lg">Productos</a>
+            </Link>
+            <Link legacyBehavior href="/contact">
+              <a className="hover:text-gray-300 transition-colors duration-300 text-lg">Contacto</a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -88,40 +77,44 @@ const Header: React.FC = () => {
             </div>
             <ul className="flex flex-col space-y-6 p-6 text-lg text-gray-700">
               <li>
-                <a
-                  href="/"
-                  className="block hover:text-gray-900 transition-all duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Inicio
-                </a>
+                <Link legacyBehavior href="/">
+                  <a
+                    className="block hover:text-gray-900 transition-all duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Inicio
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/gallery"
-                  className="block hover:text-gray-900 transition-all duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Galeria
-                </a>
+                <Link legacyBehavior href="/gallery">
+                  <a
+                    className="block hover:text-gray-900 transition-all duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Galeria
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/products"
-                  className="block hover:text-gray-900 transition-all duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Productos
-                </a>
+                <Link legacyBehavior href="/products">
+                  <a
+                    className="block hover:text-gray-900 transition-all duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Productos
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
-                  className="block hover:text-gray-900 transition-all duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Contacto
-                </a>
+                <Link legacyBehavior href="/contact">
+                  <a
+                    className="block hover:text-gray-900 transition-all duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contacto
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
