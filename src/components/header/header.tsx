@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,8 +19,17 @@ const Header: React.FC = () => {
       <header className="fixed top-1 left-1/2 transform -translate-x-1/2 w-full md:w-3/4 bg-gray-100/70 backdrop-blur-lg text-black shadow-lg rounded-none md:rounded-2xl z-50">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
-          <div className="text-2xl font-semibold tracking-wider">
-            <Link legacyBehavior href="/">Ricardo Bravo</Link>
+          <div className="relative w-32 h-12 flex-shrink-0 overflow-hidden">
+            <Link href="/">
+              <Image
+                src="/logo.png" 
+                alt="Logo"
+                height={30}
+                width={150}
+                priority
+                className="-mt-10"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
