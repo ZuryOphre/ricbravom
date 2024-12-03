@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Estilo global para scrollbars */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la scrollbar vertical */
+    height: 12px; /* Altura de la scrollbar horizontal */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #dde0e6, #6a6b6c); /* Color con degradado */
+    border-radius: 6px; /* Bordes redondeados */
+    border: 3px solid rgba(255, 255, 255, 0.5); /* Espaciado interno */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #dde0e6, #6a6b6c); /* Color al pasar el cursor */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(229, 231, 235, 0.7); /* Fondo claro */
+    border-radius: 6px; /* Bordes redondeados */
+  }
+  
+  ::-webkit-scrollbar-track:hover {
+    background: rgba(209, 213, 219, 0.8); /* Fondo al pasar el cursor */
+  }
+  
